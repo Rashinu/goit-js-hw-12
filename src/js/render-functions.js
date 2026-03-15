@@ -59,4 +59,8 @@ export function renderGallery(images) {
 
 export function clearGallery() {
   gallery.innerHTML = '';
+  if (lightbox) {
+    lightbox.destroy();
+    lightbox = null;
+  }
 }
